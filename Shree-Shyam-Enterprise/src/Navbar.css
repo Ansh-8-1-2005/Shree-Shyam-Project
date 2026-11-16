@@ -1,0 +1,142 @@
+
+.main-header {
+  width: 100%;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  min-height: 85px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  background: #123b70;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 8px;
+}
+
+.logo-text h2 {
+  font-size: 19px;
+  color: #123b70;
+  margin: 0;
+  font-weight: 800;
+}
+
+.logo-text span {
+  font-size: 11px;
+  color: #e69b24;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+/* Navigation */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #26364a;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #e69b24;
+}
+
+.nav-menu .inquiry-btn {
+  background: #123b70;
+  color: #fff;
+  padding: 13px 21px;
+  border: none;
+  border-radius: 5px;
+}
+
+.nav-menu .inquiry-btn:hover {
+  background: #e69b24;
+  color: #fff;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #123b70;
+  margin: 5px 0;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    min-height: 75px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 20px 20px;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.08);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 14px 5px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-menu .inquiry-btn {
+    text-align: center;
+    margin-top: 12px;
+  }
+}
